@@ -34,7 +34,7 @@ export class AppService {
   }
 
   async getUrlOriginal(slug: string){
-    const urlOriginal = await this.prisma.prismaServiceUrl.findUnique({
+    const urlOriginal = await this.prisma.url.findUnique({
       where: {slug}
     })
 
