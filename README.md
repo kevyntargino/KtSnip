@@ -1,6 +1,5 @@
 <p align="center">
-  <a <img <img width="2000" height="2000" alt="LogoKtSnip" src="https://github.com/user-attachments/assets/cdb588c9-2cd7-402a-8868-f04413382390" />
-/></a>
+  <img width="2000" height="2000" alt="LogoKtSnip" src="https://github.com/user-attachments/assets/cdb588c9-2cd7-402a-8868-f04413382390" />
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
