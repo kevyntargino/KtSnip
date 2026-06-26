@@ -7,7 +7,7 @@ async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const config = new swagger_1.DocumentBuilder()
         .setTitle('API KtSnip')
-        .setDescription('Documentação oficial do encurtador de URLs')
+        .setDescription('Documentação do encurtdor de links do Kevyn')
         .setVersion('1.0')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, config);

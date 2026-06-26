@@ -18,8 +18,10 @@ let AppService = class AppService {
     constructor(prisma) {
         this.prisma = prisma;
     }
+    logger = new common_1.Logger();
     async encolherUrl(urlOriginal, slug) {
         const slugFinal = slug || (0, random_string_generator_util_1.randomStringGenerator)().slice(0, 6);
+        this.logger.log(`O slug é ${slug}`);
         const slugExiste = await this.prisma.url.findUnique({
             where: { slug: slugFinal }
         });
