@@ -8,7 +8,7 @@ async function bootstrap() {
   // --- CONFIGURAÇÃO DO SWAGGER ---
   const config = new DocumentBuilder()
     .setTitle('API KtSnip')
-    .setDescription('Documentação oficial do encurtador de URLs')
+    .setDescription('Documentação do encurtdor de links do Kevyn')
     .setVersion('1.0')
     .build();
     

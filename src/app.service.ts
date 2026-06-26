@@ -1,15 +1,18 @@
-import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
+import { Injectable, Logger, BadRequestException, NotFoundException } from '@nestjs/common';
 import { randomStringGenerator } from '@nestjs/common/utils/random-string-generator.util'
 import { PrismaService } from './prisma/prisma.service';
 
 @Injectable()
 export class AppService {
   constructor(private prisma: PrismaService) {}
-
+  
+  private readonly logger = new Logger();
 
   async encolherUrl(urlOriginal: string, slug?: string){
 
     const slugFinal = slug || randomStringGenerator().slice(0, 6);
+
+    this.logger.log(`O slug é ${slug}`);
 
     const slugExiste = await this.prisma.url.findUnique({
       where: {slug: slugFinal}
